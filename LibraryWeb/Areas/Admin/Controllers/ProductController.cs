@@ -75,7 +75,7 @@ namespace LibraryWeb.Areas.Admin.Controllers
                     {
                         file.CopyTo(filestream);
                     }
-                    productVM.Product.ImageUrl = @"\images\product" + fileName;
+                    productVM.Product.ImageUrl = @"\images\product\" + fileName;
                 }
 
                 if (productVM.Product.Id == 0)
@@ -106,21 +106,21 @@ namespace LibraryWeb.Areas.Admin.Controllers
         //	return _ProductRepo;
         // }
 
-        public IActionResult Edit(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            Product? productFromDb = _unitOfWork.Product.Get(u => u.Id == id);
-            //Product? productFromDb1 = _db.Categories.FirstOrDefault(u=>u.Id == id);
-            //Product? productFromDb2 = _db.Categories.Where(u => u.Id == id).FirstOrDefault();
-            if (productFromDb == null)
-            {
-                return NotFound(productFromDb);
-            }
-            return View();
-        }
+        //public IActionResult Edit(int? id)
+        //{
+        //    if (id == null || id == 0)
+        //    { 
+        //        return NotFound();
+        //    }
+        //    Product? productFromDb = _unitOfWork.Product.Get(u => u.Id == id);
+        //    //Product? productFromDb1 = _db.Categories.FirstOrDefault(u=>u.Id == id);
+        //    //Product? productFromDb2 = _db.Categories.Where(u => u.Id == id).FirstOrDefault();
+        //    if (productFromDb == null)
+        //    {
+        //        return NotFound(productFromDb);
+        //    }
+        //    return View();
+        //}
         [HttpPost]
         public IActionResult Edit(Product obj)
         {
