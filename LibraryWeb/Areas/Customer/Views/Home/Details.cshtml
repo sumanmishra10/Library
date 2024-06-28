@@ -5,8 +5,8 @@
         <div class="card-header bg-secondary bg-gradient text-light py-4">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h3 class="text-white text-uppercase">Title</h3>
-                    <p class="text-white-50 fw-semibold mb-0">by Author</p>
+                    <h3 class="text-white text-uppercase">@Model.Title</h3>
+                    <p class="text-white-50 fw-semibold mb-0">@Model.Author</p>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
                     </div>
                     <div class="col-12 col-lg-6 offset-lg-1">
                         <div class="col-12 col-md-6 pb-4">
-                            <span class="badge">Name</span>
+                            <span class="badge">@Model.Title</span>
                         </div>
                         <div class="row ps-2">
                             <h6 class="text-dark text-opacity-50">ISBN: @Model.ISBN</h6>
@@ -34,7 +34,7 @@
                             <h6 class="text-dark text-opacity-50 pb-2">
                                 List Price:
                                 <span class="text-decoration-line-through">
-                                    ListPrice
+                                    @Model.ListPrice
                                 </span>
                             </h6>
                         </div>
@@ -57,17 +57,17 @@
                                 <div>Price</div>
                             </div>
                             <div class="p-1 col-3 col-lg-2 bg-white text-warning fw-bold">
-                                <div>10</div>
+                                <div>@Model.Price</div>
                             </div>
                             <div class="p-1 col-3 col-lg-2 bg-white text-warning fw-bold">
-                                <div>@* Price *@50</div>
+                                <div>@Model.Price50</div>
                             </div>
                             <div class="p-1 col-3 col-lg-2 bg-white text-warning fw-bold">
-                                <div>@* Price *@100</div>
+                                <div>@Model.Price100</div>
                             </div>
                         </div>
                         <div class="row pl-2 my-3">
-                            <p class="text-secondary lh-sm">Description</p>
+                            <p class="text-secondary lh-sm">@Model.Description</p>
                         </div>
                         <div class="row pl-2 mb-3">
                             <div class="col-md-4">
