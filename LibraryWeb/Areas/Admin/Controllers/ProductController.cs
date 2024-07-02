@@ -177,6 +177,16 @@ namespace LibraryWeb.Areas.Admin.Controllers
             return Json(new { data = objProductList });
         }
 
+        //[HttpGet]
+        //public IActionResult Search(string searchTerm)
+        //{
+        //    var products = _unitOfWork.Product.GetAll()
+        //        .Where(p => p.Title.Contains(searchTerm))
+        //        .ToList();
+
+        //    return View("Index", products);
+        //}
+
         #endregion
 
     }
